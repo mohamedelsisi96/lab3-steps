@@ -12,3 +12,4 @@ D:\c#\steps\intro c#\day 4\assignment\assignment4\assignment4\obj\Debug\net8.0\r
 D:\c#\steps\intro c#\day 4\assignment\assignment4\assignment4\obj\Debug\net8.0\assignment4.pdb
 D:\c#\steps\intro c#\day 4\assignment\assignment4\assignment4\obj\Debug\net8.0\assignment4.genruntimeconfig.cache
 D:\c#\steps\intro c#\day 4\assignment\assignment4\assignment4\obj\Debug\net8.0\ref\assignment4.dll
+D:\c#\steps\intro c#\day 4\assignment\assignment4\assignment4\obj\Debug\net8.0\assignment4.sourcelink.json

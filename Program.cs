@@ -76,6 +76,70 @@
         }
 
         #endregion
+
+        #region prob5
+
+        static int SearchValue(int[] arr,int num)
+        {
+            if (arr.Contains(num))
+            {
+                int ind=Array.IndexOf(arr,num);
+                Console.WriteLine($"{num} in index {ind} in array");
+                return ind;
+
+
+            }
+            else
+            {
+                Console.WriteLine($"{num} not found in array");
+                return -1;
+            }
+        }
+
+
+        #endregion
+
+        #region prob6
+        static int[] SortInArray(int[] arr ,string sorttypr)
+        {
+            if (sorttypr == "ass")
+            {
+                Array.Sort(arr);
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+               
+            }else if (sorttypr == "des")
+            {
+                Array.Reverse(arr);
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+               
+            }
+            else
+            {
+                Console.WriteLine("Invalid sort type provided.");
+                
+            }
+            return arr;
+        }
+
+
+        #endregion
+
+
+        #region prop7
+        static int SecondLargest (int[] arr)
+        {
+            int[] SortArr = (int[])arr.Clone();
+            Array.Sort(SortArr);
+            return SortArr[SortArr.Length - 2];
+        }
+
+        #endregion
         static void Main(string[] args)
         {
             double x=20,y=4;
@@ -99,6 +163,24 @@
             int[] RmvDub = RemovDupl(DubArray);
             Console.WriteLine(RemovDupl(DubArray));
             Console.WriteLine("{"+ string.Join(",", RmvDub)+ "}");
+            //prob 5
+            Console.WriteLine("--------------------- problem 5 --------------------");
+            int[] SarchArr = { 1, 2, 3, 4, 5, 6, 7 };
+            Console.WriteLine(SearchValue(SarchArr,9));
+            //prob 6
+            Console.WriteLine("--------------------- problem 6 --------------------");
+            int[] ArrSort = {1,2,6,9,31,4,8,53,96};
+            SortInArray(ArrSort, "ass");
+            SortInArray(ArrSort, "des");
+
+            //prob  7
+            Console.WriteLine("--------------------- problem 7 --------------------");
+            int[] findTwo = { 1, 2, 6, 9, 31, 4, 8, 53, 96,112 };
+            int LargestTwoNum=SecondLargest(findTwo);
+            Console.WriteLine(LargestTwoNum);
+
+
+
         }
     }
 }
